@@ -1,4 +1,4 @@
-# Gazeta Robótica [:robot:][:newspaper_roll:]
+# Gazeta Robótica :robot::newspaper_roll:
 
 ## O que é?
  Gazeta Robótica ([perfil no twitter](https://twitter.com/GazetaRobotica)) é um bot de twitter que gera notícias falsas à partir de notícias reais.
@@ -13,12 +13,12 @@
 - ***[Markovify](https://github.com/jsvine/markovify)*** - Biblioteca que gera e armazena uma corrente de Markov à partir das notícias coletadas. Também cria as notícias falsas
 
 ## Como contribuir?
- Você pode contruir realizando algum dos afazeres na lista, corringindo erros de digitação, formatando o código, sugerindo melhoras ou aumentando a eficiência dos scripts.
+ Você pode contruir realizando algum dos afazeres na lista, corringindo erros de digitação, formatando o código, sugerindo melhoras ou melhorando a performance dos scripts.
 
 ### Lista de afazeres
 #### Escopo Pequeno
 - [ ] Adicionar opção de gerar notícias seguindo tópicos específicos (ou fora de tópicos específicos)
-- [ ] Adicionar descrição para cada função e suas variáveis
+- [x] Adicionar descrição para cada função e suas variáveis
 - [ ] Fazer com que, cada vez que novas notícias sejam adicionadas no dataframe, o programa rearrange ele usando como categoria os portaias de notícia
 - [ ] Adicionar tratamento de exceção nas devidas funções
 #### Escopo Médio
@@ -28,7 +28,7 @@
 - [ ] Substituir o atual menu por um totalmente funcional, com boa aparência e mais opções
 
 ## Agradecimentos
-- @marcelo-guimaraes, por ter dado a ideia para a versão 2.0 (tornar o bot baseado em scrapping + corrente de Markov)
+- @marcelo-guimaraes por ter dado a ideia para a versão 2.0 (tornar o bot baseado em scrapping + corrente de Markov)
 - Todos que contribuiram com as bibliotecas utilizadas, bem como a linguagem em si
 
 É nóis
