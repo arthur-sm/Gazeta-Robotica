@@ -17,8 +17,8 @@
 
 ### Lista de afazeres
 #### Escopo Pequeno
-- [ ] Adicionar opção de gerar notícias seguindo tópicos específicos (ou fora de tópicos específicos)
-- [x] Adicionar descrição para cada função e suas variáveis
+- [x] Adicionar opção de gerar notícias seguindo tópicos específicos (ou fora de tópicos específicos)
+- [ ] Incluir no README agradecimentos aos escritores de artigos usados como base
 - [ ] Fazer com que, cada vez que novas notícias sejam adicionadas no dataframe, o programa rearrange ele usando como categoria os portaias de notícia
 - [ ] Adicionar tratamento de exceção nas devidas funções
 #### Escopo Médio
@@ -29,6 +29,7 @@
 
 ## Agradecimentos
 - @marcelo-guimaraes por ter dado a ideia para a versão 2.0 (tornar o bot baseado em scrapping + corrente de Markov)
+- Brienna Herold por seu [artigo](https://towardsdatascience.com/zonked-on-vicodin-in-the-presidential-race-generating-fake-headlines-with-markov-chains-87f06cccd866) sobre como gerar fake news usando como base chamadas do NY
 - Todos que contribuiram com as bibliotecas utilizadas, bem como a linguagem em si
 
 É nóis

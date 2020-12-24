@@ -14,6 +14,8 @@
 
 # Bibliotecas
 import time
+#arquivos
+import paths
 # Funções próprias
 # Funções relacionadas ao twitter (auth, postar tweet, raspar tweets)
 import lib_handler.twitter as twitter
@@ -24,14 +26,6 @@ import lib_handler.armazenamento as armazenamento
 # Funções relacionadas à corrente de Markov para gerar notícias
 import lib_handler.markov as markov
 
-class paths():
-    '''Arquivos utilizados na criação de dataframes e correntes de markov.'''
-    # PATH do arquivo com notícias armazenadas
-    NOTICIAS_CSV = 'data/Banco_noticias.csv'  # Armazenamento do Dataframe
-    # Armazenamento das noticías para leitura do Markovify
-    CHAMADAS_TXT = 'data/Chamadas.txt'
-    # Corrente de Markov armazenada como json
-    MARKOV_JSON = 'data/Corrente_markov.json'
 
 # Lista de portais da onde tiraremos notícias
 portais = (  # tweepy ignora maiúsculas/minúsculas, então podemos escrever de forma que facilite nossa leitura
@@ -141,12 +135,12 @@ def atualizar_corrente(coluna: str, entrada: str, aux: str, saida: str):
     dados_formatados = formatar.remove_parenteses(
         dados_coluna)
     # Escrevemos as chamadas num documento para que o markovify possa ler depois
-    armazenaLista(dados_formatados, aux, 'w')
+    armazena_lista(dados_formatados, aux, 'w')
     # Markovify lê o documento gerado acima e cria a corrente
     markov.gerar_corrente(aux, saida)
 
 
-def armazenaLista(lista: list or tuple, path: str, modo: str):
+def armazena_lista(lista: list or tuple, path: str, modo: str):
     '''
         Imprime cada elento da lista em um arquivo
 
@@ -163,7 +157,7 @@ def armazenaLista(lista: list or tuple, path: str, modo: str):
             arquivo.write('\n')
 
 
-def atualizarData(qntd: int = 500):
+def atualizar_dados(qntd: int = 500):
     '''
         Atualiza, em sequência, banco de notícias e corrente de markov.
 
@@ -179,4 +173,4 @@ def atualizarData(qntd: int = 500):
 
 
 if(__name__ == '__main__'):
-    atualizarData()
+    atualizar_dados()

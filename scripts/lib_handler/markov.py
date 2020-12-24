@@ -53,15 +53,20 @@ def _armazenar(conteudo: str, path: str):
     print('Corrente de Markov armazenada ✔')
 
 
-def gerar_frases(path: str, quantas: int):
-    '''Gera frases baseadas na corrente de Markov fornecida
+def carregar_corrente(path: str):
+    with AbrirAquivo(path) as f:
+        corrente_reconstruida = markovify.Text.from_json(f.read())
+    return corrente_reconstruida
+
+def gerar_frases(corrente, quantas: int) -> list:
+    '''Gera frases baseadas na corrente de Markov fornecida e retorna elas em lista
 
     Args:
         path: Path do arquivo que contem a corrente de Markov.
         quantas: Quantidade de frases que devem ser geradas.
     '''
-    with AbrirAquivo(path) as f:
-        corrente_reconstruida = markovify.Text.from_json(f.read())
+    frases = []
     while(quantas > 0):
-        print('-> {noticia} \n'.format(noticia = corrente_reconstruida.make_short_sentence(280)))
+        frases.append(corrente.make_short_sentence(280))
         quantas -= 1
+    return frases
