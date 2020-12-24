@@ -1,6 +1,6 @@
 '''
     name='Gazeta Robótica',
-    version='2.0',
+    version='2.3',
     description='Bot que analisa notícias reais para gerar notícias falsas',
     long_description=readme,
     author='ArthurSM',
