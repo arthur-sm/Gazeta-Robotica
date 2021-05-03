@@ -27,7 +27,8 @@ def atualizar_banco(noticias_novas: list, path: str):
     bancoAtualizado, bancoFinal = [], []
     # Processamento
     # Recupera DataFrame armazenado no .csv sem o index
-    banco_noticias = pd.read_csv(path, index_col=0)
+    banco_noticias = pd.read_csv(path, index_col=0, nrows=2800) 
+    #limitando o número de notícias para diminuir armazenamento e tamanho do arquivo
     print("    ☑ DataFrame recuperado")
     # Novo DataFrame à partir de novas notícias coletadas
     novasNoticias = pd.DataFrame(

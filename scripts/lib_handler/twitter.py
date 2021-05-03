@@ -13,10 +13,10 @@
 import tweepy
 
 # Keys e Tokens necessários para postar na conta automaticamente
-__api_key = '#####'
-__api_key_secret = '#####'
-__bot_acess_tk = '#####'
-__bot_acess_tk_secret = '#####'
+__api_key = ''
+__api_key_secret = ''
+__bot_acess_tk = ''
+__bot_acess_tk_secret = ''
 
 
 def api_auth() -> object:

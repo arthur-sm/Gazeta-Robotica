@@ -54,7 +54,6 @@ portais = (  # tweepy ignora maiúsculas/minúsculas, então podemos escrever de
     'AgenciaPublica',
     'PonteJornalismo',
     'NexoJornal',
-    'BRPolitico',
     'Poder360',
     # Mídia internacional
     'BBCBrasil',
